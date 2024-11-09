@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Grota - Comandos Detalhados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header com o título principal -->
+    <header>
+        <h1>Bot Grota - Comandos e Informações</h1>
+        <p>O melhor assistente para gerenciamento de facções no Discord.</p>
+    </header>
+
+    <!-- Seção de Cartões de Comandos -->
+    <section id="commands">
+        
+        <!-- Cartão 1 -->
+        <div class="card">
+            <h2>Log de Comandos</h2>
+            <button class="accordion">Ver Detalhes</button>
+            <div class="panel">
+                <p><strong>Descrição:</strong> O sistema de log registra todas as execuções de comandos e envia um "embed" com informações detalhadas.</p>
+                <p><strong>Funcionalidade:</strong> Gera um log no canal de log especificado, incluindo informações como nome do comando, argumentos, e a hora de execução.</p>
+                <p><strong>Exemplo de Uso:</strong> Sempre que um comando é executado, um registro é criado no canal de log.</p>
+            </div>
+        </div>
+
+        <!-- Cartão 2 -->
+        <div class="card">
+            <h2>Ponto Funcional</h2>
+            <button class="accordion">Ver Detalhes</button>
+            <div class="panel">
+                <p><strong>Descrição:</strong> Registra o tempo que os membros passam em um canal de voz específico e gera um relatório de entrada e saída.</p>
+                <p><strong>Funcionalidade:</strong> Calcula o tempo total na chamada e envia um log detalhado, incluindo nome, cargo, horário de entrada e saída.</p>
+                <pre>Ponto Funcionario Finalizado:
+Funcionario: @membro
+Cargo: Administrador
+Horário de entrada: 2023-09-16 14:00:00
+Horário de saída: 2023-09-16 15:30:00
+Tempo total: 1h 30m 0s</pre>
+            </div>
+        </div>
+
+        <!-- Cartão 3 -->
+        <div class="card">
+            <h2>Teste</h2>
+            <button class="accordion">Ver Detalhes</button>
+            <div class="panel">
+                <p><strong>Descrição:</strong> Testa a latência do bot e responde com o ping em milissegundos.</p>
+                <p><strong>Exemplo de Uso:</strong> <code>/teste</code></p>
+                <p><strong>Resposta:</strong> 💦 50ms!</p>
+            </div>
+        </div>
+
+        <!-- Cartão 4 -->
+        <div class="card">
+            <h2>Setar Membro</h2>
+            <button class="accordion">Ver Detalhes</button>
+            <div class="panel">
+                <p><strong>Descrição:</strong> Configura um novo membro, atribuindo-lhe um apelido com o ID e um cargo padrão.</p>
+                <p><strong>Funcionalidade:</strong> Adiciona o cargo de membro, altera o apelido e registra a setagem em um canal de log.</p>
+                <p><strong>Exemplo de Uso:</strong> <code>/setar @membro João 1234</code></p>
+                <p><strong>Resultado:</strong> O membro "João" recebe o apelido "MEM ✔ João | 1234" e o cargo padrão de Membro.</p>
+            </div>
+        </div>
+
+        <!-- Cartão 5 -->
+        <div class="card">
+            <h2>Aplicar PD</h2>
+            <button class="accordion">Ver Detalhes</button>
+            <div class="panel">
+                <p><strong>Descrição:</strong> Remove todos os cargos de um membro e aplica a tag "PD❌". Pode incluir até 3 provas.</p>
+                <p><strong>Funcionalidade:</strong> Remove cargos, altera apelido e nome, e registra as provas no log.</p>
+                <p><strong>Exemplo de Uso:</strong> <code>/pd @membro Motivo "link_prova_1" "link_prova_2" "link_prova_3"</code></p>
+                <p><strong>Resultado:</strong> O membro é marcado com "PD❌", e as provas são registradas no log.</p>
+            </div>
+        </div>
+
+        <!-- Cartão 6 -->
+        <div class="card">
+            <h2>Atribuir Advertência</h2>
+            <button class="accordion">Ver Detalhes</button>
+            <div class="panel">
+                <p><strong>Descrição:</strong> Aplica um cargo de advertência (ADV) ao membro conforme o nível (1, 2 ou 3). Pode registrar até 3 provas.</p>
+                <p><strong>Funcionalidade:</strong> Atribui o cargo de advertência e registra no canal de log.</p>
+                <p><strong>Exemplo de Uso:</strong> <code>/adv @membro 2 Motivo "link_prova_1"</code></p>
+                <p><strong>Resultado:</strong> O membro recebe o cargo "ADV 2", e um log é gerado.</p>
+            </div>
+        </div>
+
+        <!-- Cartão 7 -->
+        <div class="card">
+            <h2>Promoção</h2>
+            <button class="accordion">Ver Detalhes</button>
+            <div class="panel">
+                <p><strong>Descrição:</strong> Promove um membro, atribuindo-lhe um novo cargo e alterando seu apelido para refletir a promoção.</p>
+                <p><strong>Exemplo de Uso:</strong> <code>/promover @membro Cargo "Nome" "ID"</code></p>
+                <p><strong>Resultado:</strong> O membro é promovido e o apelido é modificado de acordo com o novo cargo.</p>
+            </div>
+        </div>
+
+        <!-- Cartão 8 -->
+        <div class="card">
+            <h2>Rebaixamento</h2>
+            <button class="accordion">Ver Detalhes</button>
+            <div class="panel">
+                <p><strong>Descrição:</strong> Rebaixa um membro, removendo seu cargo atual e atribuindo um novo de nível inferior.</p>
+                <p><strong>Funcionalidade:</strong> Remove o cargo, altera o apelido e registra no log.</p>
+                <p><strong>Exemplo de Uso:</strong> <code>/rebaixar @membro Cargo "Nome" "ID" Motivo "Cargo Mantido"</code></p>
+                <p><strong>Resultado:</strong> O membro é rebaixado e o apelido é atualizado.</p>
+            </div>
+        </div>
+
+        <!-- Cartão 9 -->
+        <div class="card">
+            <h2>Registrar Parceria</h2>
+            <button class="accordion">Ver Detalhes</button>
+            <div class="panel">
+                <p><strong>Descrição:</strong> Registra uma nova parceria com informações detalhadas sobre a facção, o líder, e a produção. Também permite incluir uma imagem da "mochila".</p>
+                <p><strong>Exemplo de Uso:</strong> <code>/parceria "Facção X" "Líder Y" 123456789 "9999-9999" "Produção Z" "link_da_imagem"</code></p>
+                <p><strong>Resultado:</strong> A parceria é registrada com todas as informações no canal de log.</p>
+            </div>
+        </div>
+
+        <!-- Cartão 10 -->
+        <div class="card">
+            <h2>Registrar Encomenda</h2>
+            <button class="accordion">Ver Detalhes</button>
+            <div class="panel">
+                <p><strong>Descrição:</strong> Registra uma nova encomenda com detalhes sobre o cliente, produto, quantidade, data de entrega e valor.</p>
+                <p><strong>Exemplo de Uso:</strong> <code>/encomenda "Cliente X" 123456 "Produto Y" 10 "2023-09-30" 150.00</code></p>
+                <p><strong>Resultado:</strong> A encomenda é registrada no canal de encomendas.</p>
+            </div>
+        </div>
+
+        <!-- Cartão 11 -->
+        <div class="card">
+            <h2>Definir Status do Bot</h2>
+            <button class="accordion">Ver Detalhes</button>
+            <div class="panel">
+                <p><strong>Descrição:</strong> Define o status de presença do bot, permitindo que ele exiba um jogo ou outra atividade personalizada.</p>
+                <p><strong>Exemplo de Uso:</strong> <code>/statusbot "Gerenciando facções"</code></p>
+                <p><strong>Resultado:</strong> O status do bot é atualizado para "Gerenciando facções".</p>
+            </div>
+        </div>
+
+        <!-- Cartão 12 -->
+        <div class="card">
+            <h2>Criar Embed Personalizado</h2>
+            <button class="accordion">Ver Detalhes</button>
+            <div class="panel">
+                <p><strong>Descrição:</strong> Cria um embed personalizado com título, descrição, autor e imagem. Também pode incluir um link.</p>
+                <p><strong>Exemplo de Uso:</strong> <code>/embed "Título" "Descrição" "Autor" "link_da_imagem" "link_opcional"</code></p>
+                <p><strong>Resultado:</strong> Um embed personalizado é criado e enviado.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Desenvolvido por Jose Leblanc © 2023</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

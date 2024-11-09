@@ -1,0 +1,179 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #ffffff 0%, #f2f2f2 100%);  /* Gradiente de branco para cinza claro */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilo do cabeçalho */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.8);  /* Fundo branco translúcido */
+    color: #333;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais acentuada para destaque */
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+}
+
+header h1 {
+    font-family: 'Segoe UI Black', sans-serif;
+    font-size: 3.5rem;
+    animation: fadeInDown 1s ease-in-out;
+    color: #2a8834; /* Cor verde */
+}
+
+header p {
+    font-size: 1.3rem;
+    margin-top: 15px;
+    opacity: 0.9;
+    animation: fadeIn 2s ease-in-out;
+    color: #555;
+}
+
+/* Animações */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Grid de cartões */
+section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Estilo dos cartões */
+.card {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco translúcido */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra mais suave para criar profundidade */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #2a8834; /* Cor verde */
+    font-family: 'Segoe UI Black', sans-serif;
+}
+
+.card h2::before {
+    content: "📝 "; /* Emoji de caderno */
+    font-size: 1.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.card .accordion {
+    background-color: transparent;
+    color: #333;
+    padding: 0;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.card .accordion:hover {
+    color: #4CAF50;
+}
+
+/* Painel de informações do comando */
+.panel {
+    display: none;
+    padding-top: 15px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #666;
+    border-top: 1px solid #ddd;
+    margin-top: 15px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.panel.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Rodapé elegante */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco translúcido */
+    color: #333;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra consistente com o cabeçalho */
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Background decorado com partículas */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: -1;
+}
